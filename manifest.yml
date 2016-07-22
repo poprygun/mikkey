@@ -1,0 +1,11 @@
+---
+applications:
+- name: mikkey
+  host: mikkey
+  path: target/mikkey.war
+  env:
+    AGE: 13
+    FIRST_NAME: Nicole
+  services:
+  - mq-service
+
