@@ -1,5 +1,6 @@
 package io.pivotal.poc;
 
+import io.pivotal.pcfs.ibmmq.mock.MQQueueConnectionFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -24,6 +25,10 @@ public class ApplicationController implements ApplicationContextAware {
     @Autowired
     private BagOfProperties bagOfProperties;
 
+    @Autowired
+    private MQQueueConnectionFactory mqQueueConnectionFactory;
+
+
     private static Logger logger = Logger.getLogger(ApplicationController.class.getName());
 
 
@@ -35,12 +40,12 @@ public class ApplicationController implements ApplicationContextAware {
     @RequestMapping(value = "/props", method = RequestMethod.GET)
     public String props(ModelMap model) {
 
-        model.addAttribute("bag", bagOfProperties);
+        model.addAttribute("bag", mqQueueConnectionFactory);
 
         return "bag-of-properties";
     }
 
-    @RequestMapping(value = "/beans", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String hello(ModelMap model) {
 
 
