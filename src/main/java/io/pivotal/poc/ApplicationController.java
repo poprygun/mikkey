@@ -1,6 +1,7 @@
 package io.pivotal.poc;
 
-import io.pivotal.pcfs.ibmmq.mock.MQQueueConnectionFactory;
+//import io.pivotal.pcfs.ibmmq.mock.MQQueueConnectionFactory;
+import com.ibm.mq.jms.MQQueueConnectionFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -28,6 +29,9 @@ public class ApplicationController implements ApplicationContextAware {
     @Autowired
     private MQQueueConnectionFactory mqQueueConnectionFactory;
 
+//    @Autowired
+//    private MessageService messageService;
+
 
     private static Logger logger = Logger.getLogger(ApplicationController.class.getName());
 
@@ -36,6 +40,15 @@ public class ApplicationController implements ApplicationContextAware {
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
     }
+
+//    @RequestMapping(value = "/message", method = RequestMethod.GET)
+//    public String sendMessage(ModelMap model) {
+//
+//        messageService.sendMessage("Here we go.....!!!");
+//        model.addAttribute("msgArgument", "Sent message to jms, check logs.");
+//
+//        return "index";
+//    }
 
     @RequestMapping(value = "/props", method = RequestMethod.GET)
     public String props(ModelMap model) {
