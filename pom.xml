@@ -16,10 +16,124 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <spring.version>4.3.1.RELEASE</spring.version>
+    <mq.client.version>7.5.0.6</mq.client.version>
   </properties>
 
   <dependencies>
-    <!-- IBM MQ Connector -->
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>ldap</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>jta</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>jndi</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>jms</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>fscontext</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.tools.ras</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.soap</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>CL3Export</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mqjms</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.jmqi</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.disthub2.dhbcore</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.connector</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.headers</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>CL3NoExport</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.axis2</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.commonservices</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.jms.Nojndi</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ibm</groupId>
+      <artifactId>com.ibm.mq.pcf</artifactId>
+      <version>${mq.client.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-jms</artifactId>
@@ -27,11 +141,12 @@
       <!--<version>3.0.5.RELEASE</version>-->
     </dependency>
 
-    <dependency>
-      <groupId>io.pivotal.pcfs</groupId>
-      <artifactId>spring-cloud-services-ibmmq</artifactId>
-      <version>1.5-SNAPSHOT</version>
-    </dependency>
+    <!-- IBM MQ Connector -->
+    <!--<dependency>-->
+      <!--<groupId>io.pivotal.pcfs</groupId>-->
+      <!--<artifactId>spring-cloud-services-ibmmq</artifactId>-->
+      <!--<version>1.6-SNAPSHOT</version>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId>javax.servlet</groupId>

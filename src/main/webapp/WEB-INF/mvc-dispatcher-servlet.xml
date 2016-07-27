@@ -8,7 +8,7 @@
 
     <!--<cloud:properties id="cloud-properties"/>-->
     <!--<context:property-placeholder properties-ref="cloud-properties"/>-->
-    <cloud:service-scan></cloud:service-scan>
+    <!--<cloud:service-scan></cloud:service-scan>-->
     <!--<cloud:service id="mq" service-name="mq-service" connector-type="org.springframework.cloud.cloudfoundry.MqCloudfoundryConnector" />-->
 
 
@@ -18,4 +18,54 @@
         <property name="firstName" value="${FIRST_NAME:Boris}" />
         <!--<property name="mqUrl" value="#{mq-service.list}" />-->
     </bean>
+
+    <!-- WebSphere MQ Connection Factory -->
+    <!--<bean id="mqConnectionFactory" class="com.ibm.mq.jms.MQQueueConnectionFactory">-->
+        <!--<property name="hostName">-->
+            <!--<value>my-host</value>-->
+        <!--</property>-->
+        <!--<property name="port">-->
+            <!--<value>1414</value>-->
+        <!--</property>-->
+        <!--<property name="queueManager">-->
+            <!--<value>my-queue-manager</value>-->
+        <!--</property>-->
+        <!--<property name="transportType">-->
+            <!--<value>1</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!-- JMS Queue Connection Factory -->
+    <!--<bean id="jmsQueueConnectionFactory"-->
+          <!--class="org.springframework.jms.connection.SingleConnectionFactory">-->
+        <!--<property name="targetConnectionFactory">-->
+            <!--<ref bean="mqConnectionFactory" />-->
+        <!--</property>-->
+        <!--<property name="pubSubDomain">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!-- JMS Destination Resolver -->
+    <!--<bean id="jmsDestinationResolver"-->
+          <!--class="org.springframework.jms.support.destination.DynamicDestinationResolver">-->
+    <!--</bean>-->
+
+    <!-- JMS Queue Template -->
+    <!--<bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate">-->
+        <!--<property name="connectionFactory">-->
+            <!--<ref bean="jmsQueueConnectionFactory" />-->
+        <!--</property>-->
+        <!--<property name="destinationResolver">-->
+            <!--<ref bean="jmsDestinationResolver" />-->
+        <!--</property>-->
+        <!--<property name="pubSubDomain">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+        <!--<property name="receiveTimeout">-->
+            <!--<value>20000</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="messageService" class="io.pivotal.poc.MessageService" />-->
 </beans>

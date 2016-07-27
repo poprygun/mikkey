@@ -13,8 +13,8 @@ import javax.jms.JMSException;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:/message-service-test.xml"})
+//@RunWith(SpringJUnit4ClassRunner.class)
+//@ContextConfiguration(locations={"classpath:/message-service-test.xml"})
 public class MessageServiceTest{
     @Autowired
     private MessageService messageService;
@@ -32,6 +32,7 @@ public class MessageServiceTest{
      * Test that sends a message to a queue.
      */
     @Test
+    @Ignore
     public void testSendMessage() {
         messageService.sendMessage(message);
     }

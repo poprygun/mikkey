@@ -6,6 +6,9 @@ applications:
   env:
     AGE: 13
     FIRST_NAME: Nicole
-  services:
-  - mq-service
+    mq.host: 204.194.139.183
+    mq.port: 1414
+    mq.channel: FAPI_SVRCONN
+    mq.queuemanager: CAT_FAPO01
+    mq.queue: FAPI.CL.QUEUE
 

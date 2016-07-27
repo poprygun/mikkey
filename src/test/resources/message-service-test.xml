@@ -23,11 +23,14 @@
         <property name="transportType">
             <value>1</value>
         </property>
+        <property name="userid">
+            <value>1</value>
+        </property>
     </bean>
 
     <!-- JMS Queue Connection Factory -->
     <bean id="jmsQueueConnectionFactory"
-          class="org.springframework.jms.connection.SingleConnectionFactory102">
+          class="org.springframework.jms.connection.SingleConnectionFactory">
         <property name="targetConnectionFactory">
             <ref bean="mqConnectionFactory" />
         </property>
@@ -42,7 +45,7 @@
     </bean>
 
     <!-- JMS Queue Template -->
-    <bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate102">
+    <bean id="jmsQueueTemplate" class="org.springframework.jms.core.JmsTemplate">
         <property name="connectionFactory">
             <ref bean="jmsQueueConnectionFactory" />
         </property>
