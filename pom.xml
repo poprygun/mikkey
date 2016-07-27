@@ -54,7 +54,6 @@
       <version>${mq.client.version}</version>
     </dependency>
 
-
     <dependency>
       <groupId>com.ibm</groupId>
       <artifactId>com.ibm.mq.soap</artifactId>
@@ -190,7 +189,16 @@
       <version>4.2.5.RELEASE</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.21</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.21</version>
+    </dependency>
   </dependencies>
 
   <build>
