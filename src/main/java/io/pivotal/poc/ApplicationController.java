@@ -13,9 +13,11 @@ import java.util.logging.Logger;
 @RequestMapping("/")
 public class ApplicationController {
 
-    @Autowired
-    private MQSender mqSender;
+//    @Autowired
+//    private MQSender mqSender;
 
+    @Autowired
+    private MQGateway mqGateway;
 
     private static Logger logger = Logger.getLogger(ApplicationController.class.getName());
 
@@ -29,9 +31,9 @@ public class ApplicationController {
     ) throws Exception {
         logger.info("********" + host);
         logger.info("***Sending to queue");
-        String receivedMessage = mqSender.pingQueue(host, port, queueManager, channel, queue);
+        mqGateway.send("Message sent from testing application.  Ignore");
         logger.info("***Queue responded to queue");
-        model.addAttribute("msgArgument", "Sent and Received message to jms, check logs. " + receivedMessage);
+        model.addAttribute("msgArgument", "Sent message to jms, check logs. ");
         return "index";
     }
 }
