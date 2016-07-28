@@ -11,4 +11,9 @@ applications:
     mq.channel: FAPI_SVRCONN
     mq.queuemanager: CAT_FAPO01
     mq.queue: FAPI.CL.QUEUE
-
+    io.pivotal.mq.host: 204.194.139.183
+    io.pivotal.mq.port: 1414
+    io.pivotal.mq.queue-manager: CAT_FAPO01
+    io.pivotal.mq.channel: FAPI_SVRCONN
+    io.pivotal.mq.incoming-queue: FAPI.CL.QUEUE
+    JAVA_OPTS: '-Duser.name=firstapimq'
