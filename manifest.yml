@@ -16,4 +16,4 @@ applications:
     io.pivotal.mq.queue-manager: CAT_FAPO01
     io.pivotal.mq.channel: FAPI_SVRCONN
     io.pivotal.mq.incoming-queue: FAPI.CL.QUEUE
-    JAVA_OPTS: '-Duser.name=firstapimq'
+    JAVA_OPTS: '-Duser.name=XXXX-user'
