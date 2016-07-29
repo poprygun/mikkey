@@ -1,0 +1,19 @@
+---
+applications:
+- name: mikkey
+  host: mikkey
+  path: target/mikkey.war
+  env:
+    AGE: 13
+    FIRST_NAME: Nicole
+    mq.host: localhost
+    mq.port: 1414
+    mq.channel: QC1
+    mq.queuemanager: QM1
+    mq.queue: Q1
+    io.pivotal.mq.host: localhost
+    io.pivotal.mq.port: 1414
+    io.pivotal.mq.queue-manager: QM1
+    io.pivotal.mq.channel: QC1
+    io.pivotal.mq.incoming-queue: QC1
+    JAVA_OPTS: '-Duser.name=XXX'
